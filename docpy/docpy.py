@@ -1,5 +1,6 @@
 import re
 import datetime as dt
+import pandas as pd
 
 def document_record(supplier, filename):
 	today = dt.datetime.today().date()
