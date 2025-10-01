@@ -27,7 +27,8 @@ def document_table(records):
 		condition = row["SITUAÇÃO"] == "VENCIDO"# or pd.isna(row["SITUAÇÃO"]) or row["SITUAÇÃO"] == ""
 		return ['background-color: red' if condition else '' for _ in row]
 	df = pd.DataFrame(records).style.apply(highlight_red, axis=1)
-	return df.to_excel(f'LISTA DE DOCUMENTOS PRESENTES - {dt.datetime.today().date().strftime("%Y-%m-%d")}.xlsx', index=False)
+	return df
+	#return df.to_excel(f'LISTA DE DOCUMENTOS PRESENTES - {dt.datetime.today().date().strftime("%Y-%m-%d")}.xlsx', index=False)
 
 
 def extract_int_prefix(s):
